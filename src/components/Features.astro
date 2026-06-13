@@ -1,0 +1,63 @@
+---
+import { useTranslations } from "../i18n/utils";
+import type { Lang } from "../i18n/utils";
+
+const { lang } = Astro.props as { lang: Lang };
+const t = useTranslations(lang);
+
+const S =
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">';
+
+const cards = [
+  {
+    icon: `${S}<path d="M4 5h16M4 12h10M4 19h7"/><path d="M16 14l2.5 6 1-3 3-1z"/></svg>`,
+    title: t("features.render.title"),
+    desc: t("features.render.desc"),
+  },
+  {
+    icon: `${S}<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M12 4v16M7 9h2M7 13h2M15 9h2M15 13h2"/></svg>`,
+    title: t("features.editor.title"),
+    desc: t("features.editor.desc"),
+  },
+  {
+    icon: `${S}<rect x="3" y="4" width="7" height="6" rx="1.4"/><rect x="14" y="9" width="7" height="6" rx="1.4"/><rect x="7" y="15" width="7" height="5" rx="1.4"/><path d="M10 7h2.5a1.5 1.5 0 0 1 1.5 1.5V9"/></svg>`,
+    title: t("features.canvas.title"),
+    desc: t("features.canvas.desc"),
+  },
+  {
+    icon: `${S}<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 13l2 2 4-4"/></svg>`,
+    title: t("features.workspace.title"),
+    desc: t("features.workspace.desc"),
+  },
+  {
+    icon: `${S}<path d="M12 15V3m0 0 4 4m-4-4-4 4"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>`,
+    title: t("features.export.title"),
+    desc: t("features.export.desc"),
+  },
+  {
+    icon: `${S}<circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z"/></svg>`,
+    title: t("features.themes.title"),
+    desc: t("features.themes.desc"),
+  },
+];
+---
+<section class="section features" id="features">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow">{t("nav.features")}</p>
+      <h2>{t("features.heading")}</h2>
+      <p class="sub">{t("features.subheading")}</p>
+    </div>
+    <div class="feature-grid">
+      {
+        cards.map((card) => (
+          <article class="card">
+            <div class="ico" set:html={card.icon} />
+            <h3>{card.title}</h3>
+            <p>{card.desc}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

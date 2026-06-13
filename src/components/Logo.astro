@@ -1,0 +1,19 @@
+---
+interface Props {
+  class?: string;
+}
+const { class: className = "mark" } = Astro.props;
+const id = `lg-${Math.random().toString(36).slice(2, 8)}`;
+---
+<svg class={className} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-hidden="true">
+  <defs>
+    <linearGradient id={id} x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="var(--accent)"></stop>
+      <stop offset="1" stop-color="var(--accent-2)"></stop>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="15" fill={`url(#${id})`}></rect>
+  <path
+    d="M41.5 23.5c-2-3-5.2-4.8-9.2-4.8-7 0-12 5.4-12 13.3s4.9 13.3 12 13.3c6.6 0 11-4.4 11-11.2v-2.4H32.4v5h5.1c-.4 2.6-2.5 4.3-5.2 4.3-3.8 0-6.4-3.4-6.4-8.9s2.6-8.9 6.4-8.9c2.1 0 3.8.9 5 2.7z"
+    fill="#fff"></path>
+</svg>

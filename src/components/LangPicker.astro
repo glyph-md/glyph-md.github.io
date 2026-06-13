@@ -1,0 +1,36 @@
+---
+import { languages, localizedPath, type Lang } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const current = languages[lang];
+---
+<details class="langpick">
+  <summary aria-label="Change language">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"></circle>
+      <path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"></path>
+    </svg>
+    <span>{current.label}</span>
+  </summary>
+  <div class="langpick-menu">
+    {
+      (Object.keys(languages) as Lang[]).map((code) => (
+        <a
+          href={localizedPath(code, "/")}
+          hreflang={code}
+          aria-current={code === lang ? "true" : undefined}
+        >
+          <span>{languages[code].label}</span>
+          {code === lang && (
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true">
+              <path d="M20 6 9 17l-5-5"></path>
+            </svg>
+          )}
+        </a>
+      ))
+    }
+  </div>
+</details>

@@ -1,0 +1,86 @@
+---
+import { useTranslations, type Lang } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const apple = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.8-3.5.8s-1.8-.8-3-.8c-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.3 2.8 2.3 1.1 0 1.5-.7 2.9-.7s1.7.7 2.9.7 2-1.1 2.7-2.1c.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.5zM14.7 6c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.1z"/></svg>';
+const win = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5.6 10.4 4.5v6.9H3zM10.4 12.2v6.9L3 18V12.2zM11.4 4.4 21 3v8.4h-9.6zM21 12.2V21l-9.6-1.3v-7.5z"/></svg>';
+const linux = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17l4-5 3 3 3-4 4 6z"/><rect x="3" y="4" width="18" height="16" rx="2"/></svg>';
+
+type Platform = { title: string; icon: string; cmds: string[] };
+const platforms: Platform[] = [
+  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap hamidfzm/tap", "brew install --cask glyph"] },
+  { title: "Windows · Chocolatey", icon: win, cmds: ["choco install glyph"] },
+  { title: "Windows · Scoop", icon: win, cmds: ["scoop bucket add hamidfzm https://github.com/hamidfzm/scoop-bucket", "scoop install glyph"] },
+  { title: "Arch Linux · AUR", icon: linux, cmds: ["yay -S glyph-md-bin"] },
+  { title: "Debian / Ubuntu · PPA", icon: linux, cmds: ["sudo add-apt-repository ppa:hamidfzm/glyph", "sudo apt update", "sudo apt install glyph"] },
+  { title: "Linux · Homebrew", icon: linux, cmds: ["brew tap hamidfzm/tap", "brew install glyph"] },
+];
+
+const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+const checkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+---
+<section class="section download" id="download">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow">{t("nav.download")}</p>
+      <h2>{t("download.heading")}</h2>
+      <p class="sub">{t("download.subheading")}</p>
+    </div>
+    <div class="dl-grid">
+      {
+        platforms.map((p) => (
+          <div class="dl-card">
+            <header>
+              <Fragment set:html={p.icon} />
+              <h3>{p.title}</h3>
+            </header>
+            {p.cmds.map((cmd) => (
+              <div class="code">
+                {cmd}
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy={cmd}
+                  aria-label={t("download.copy")}
+                  data-copy-icon={copyIcon}
+                  data-check-icon={checkIcon}
+                  set:html={copyIcon}
+                />
+              </div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+    <p class="dl-foot">
+      {t("download.manual")}{" "}
+      <a href="https://github.com/hamidfzm/glyph/releases" rel="noopener">{t("download.releases")}</a>.
+    </p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>(".copy-btn").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const text = btn.dataset.copy ?? "";
+      try {
+        await navigator.clipboard.writeText(text);
+        const check = btn.dataset.checkIcon ?? "";
+        const copy = btn.dataset.copyIcon ?? "";
+        btn.innerHTML = check;
+        btn.classList.add("copied");
+        setTimeout(() => {
+          btn.innerHTML = copy;
+          btn.classList.remove("copied");
+        }, 1600);
+      } catch {
+        /* clipboard unavailable */
+      }
+    });
+  });
+</script>

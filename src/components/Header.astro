@@ -1,0 +1,29 @@
+---
+import { useTranslations, localizedPath, type Lang } from "../i18n/utils";
+import Logo from "./Logo.astro";
+import LangPicker from "./LangPicker.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const home = localizedPath(lang, "/");
+const repo = "https://github.com/hamidfzm/glyph";
+---
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href={home} aria-label="Glyph home">
+      <Logo />
+      <span>Glyph</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-desktop">
+        <a class="nav-link" href={`${home}#features`}>{t("nav.features")}</a>
+        <a class="nav-link" href={`${home}#download`}>{t("nav.download")}</a>
+        <a class="nav-link" href={repo} rel="noopener">{t("nav.github")}</a>
+      </div>
+      <LangPicker lang={lang} />
+    </nav>
+  </div>
+</header>

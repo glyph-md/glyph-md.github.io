@@ -1,0 +1,47 @@
+---
+import { useTranslations, localizedPath, type Lang } from "../i18n/utils";
+import Logo from "./Logo.astro";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+const home = localizedPath(lang, "/");
+const repo = "https://github.com/hamidfzm/glyph";
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href={home} aria-label="Glyph home">
+          <Logo />
+          <span>Glyph</span>
+        </a>
+        <p>{t("footer.tagline")}</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>{t("footer.product")}</h4>
+          <ul>
+            <li><a href={`${home}#features`}>{t("nav.features")}</a></li>
+            <li><a href={`${home}#download`}>{t("nav.download")}</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>{t("footer.resources")}</h4>
+          <ul>
+            <li><a href={repo} rel="noopener">{t("nav.github")}</a></li>
+            <li><a href={`${repo}#readme`} rel="noopener">{t("footer.docs")}</a></li>
+            <li><a href={`${repo}/issues`} rel="noopener">{t("footer.issues")}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© {year} Glyph · {t("footer.license")}</span>
+      <span>{t("footer.built")}</span>
+    </div>
+  </div>
+</footer>
