@@ -13,7 +13,7 @@ const linux = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 
 type Platform = { title: string; icon: string; cmds: string[] };
 const platforms: Platform[] = [
-  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap hamidfzm/tap", "brew install --cask glyph"] },
+  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap hamidfzm/tap", "brew trust hamidfzm/tap", "brew install --cask glyph"] },
   { title: "Windows · Chocolatey", icon: win, cmds: ["choco install glyph"] },
   { title: "Windows · Scoop", icon: win, cmds: ["scoop bucket add hamidfzm https://github.com/hamidfzm/scoop-bucket", "scoop install glyph"] },
   { title: "Arch Linux · AUR", icon: linux, cmds: ["yay -S glyph-md-bin"] },
