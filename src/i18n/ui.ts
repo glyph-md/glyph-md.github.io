@@ -45,6 +45,9 @@ export const ui = {
     "features.workspace.title": "Workspace & wikilinks",
     "features.workspace.desc":
       "Open a folder as a workspace with a file tree, [[wikilinks]], a backlinks panel, and a command palette to jump anywhere with Cmd/Ctrl+K.",
+    "features.graph.title": "Graph view",
+    "features.graph.desc":
+      "See your whole workspace as a force-directed graph — notes are nodes, wikilinks are edges. Hover to highlight neighbours, click to open, and watch it update live as you write.",
     "features.export.title": "Export anywhere",
     "features.export.desc":
       "Print or export to PDF, HTML, DOCX, and EPUB — including vector math and diagrams. Your documents leave Glyph looking exactly as they should.",
@@ -97,6 +100,9 @@ export const ui = {
     "features.workspace.title": "فضای کاری و ویکی‌لینک",
     "features.workspace.desc":
       "یک پوشه را به‌عنوان فضای کاری با درخت پرونده، [[ویکی‌لینک]]، پنل بک‌لینک و پالت فرمان باز کنید و با Cmd/Ctrl+K به هرجا بپرید.",
+    "features.graph.title": "نمای گراف",
+    "features.graph.desc":
+      "کل فضای کاری‌تان را به‌شکل یک گراف ببینید: یادداشت‌ها گره‌اند و ویکی‌لینک‌ها یال. روی هر گره بروید تا همسایه‌هایش پررنگ شوند، کلیک کنید تا باز شود، و ببینید که همگام با نوشتن‌تان زنده به‌روز می‌شود.",
     "features.export.title": "خروجی به هر قالب",
     "features.export.desc":
       "چاپ کنید یا به PDF، HTML، DOCX و EPUB خروجی بگیرید — همراه با ریاضی و نمودارهای برداری. سندهای شما دقیقاً همان‌طور که باید، از گلیف بیرون می‌آیند.",
@@ -149,6 +155,9 @@ export const ui = {
     "features.workspace.title": "Espacio de trabajo y wikilinks",
     "features.workspace.desc":
       "Abre una carpeta como espacio de trabajo con árbol de archivos, [[wikilinks]], panel de retroenlaces y una paleta de comandos para saltar a cualquier sitio con Cmd/Ctrl+K.",
+    "features.graph.title": "Vista de grafo",
+    "features.graph.desc":
+      "Visualiza todo tu espacio de trabajo como un grafo dirigido por fuerzas: las notas son nodos y los wikilinks, aristas. Pasa el cursor para resaltar vecinos, haz clic para abrir y míralo actualizarse en vivo mientras escribes.",
     "features.export.title": "Exporta a donde sea",
     "features.export.desc":
       "Imprime o exporta a PDF, HTML, DOCX y EPUB — incluyendo matemáticas y diagramas vectoriales. Tus documentos salen de Glyph tal como deben verse.",
@@ -201,6 +210,9 @@ export const ui = {
     "features.workspace.title": "工作区与 Wiki 链接",
     "features.workspace.desc":
       "将文件夹作为工作区打开，带文件树、[[wiki 链接]]、反向链接面板，以及用 Cmd/Ctrl+K 跳转到任意位置的命令面板。",
+    "features.graph.title": "关系图视图",
+    "features.graph.desc":
+      "将整个工作区呈现为力导向关系图：笔记是节点，wiki 链接是连线。悬停高亮相邻节点，点击即可打开，并随你的编辑实时更新。",
     "features.export.title": "随处导出",
     "features.export.desc":
       "打印或导出为 PDF、HTML、DOCX 和 EPUB——包括矢量数学公式和图表。你的文档离开 Glyph 时，外观与应有的样子完全一致。",
@@ -252,6 +264,9 @@ export const ui = {
     "features.workspace.title": "Workspace & Wikilinks",
     "features.workspace.desc":
       "Öffne einen Ordner als Workspace mit Dateibaum, [[Wikilinks]], Backlink-Panel und einer Befehlspalette, um mit Cmd/Strg+K überallhin zu springen.",
+    "features.graph.title": "Graphansicht",
+    "features.graph.desc":
+      "Sieh deinen gesamten Workspace als kräftegeführten Graphen: Notizen sind Knoten, Wikilinks sind Kanten. Fahre über einen Knoten, um Nachbarn hervorzuheben, klicke zum Öffnen, und beobachte, wie er sich beim Schreiben live aktualisiert.",
     "features.export.title": "Überallhin exportieren",
     "features.export.desc":
       "Drucke oder exportiere als PDF, HTML, DOCX und EPUB — inklusive Vektor-Mathe und -Diagrammen. Deine Dokumente verlassen Glyph genau so, wie sie aussehen sollen.",
