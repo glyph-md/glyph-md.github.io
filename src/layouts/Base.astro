@@ -28,6 +28,19 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="twitter:card" content="summary_large_image" />
 
     <meta name="theme-color" content="#007aff" />
+
+    {
+      lang === "fa" && (
+        <Fragment>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&display=swap"
+          />
+        </Fragment>
+      )
+    }
   </head>
   <body>
     <a class="skip-link" href="#main">{t("nav.skip")}</a>
