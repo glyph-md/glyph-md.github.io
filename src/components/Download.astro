@@ -19,6 +19,7 @@ const platforms: Platform[] = [
   { title: "Linux · Snap", icon: linux, cmds: ["sudo snap install glyph"] },
   { title: "Arch Linux · AUR", icon: linux, cmds: ["yay -S glyph-md-bin"] },
   { title: "Debian / Ubuntu · PPA", icon: linux, cmds: ["sudo add-apt-repository ppa:hamidfzm/glyph", "sudo apt update", "sudo apt install glyph"] },
+  { title: "Debian / Ubuntu · APT", icon: linux, cmds: ["curl -fsSL https://hamidfzm.github.io/apt-repo/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/glyph.gpg", 'echo "deb [signed-by=/usr/share/keyrings/glyph.gpg] https://hamidfzm.github.io/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/glyph.list', "sudo apt update", "sudo apt install glyph"] },
   { title: "Linux · Homebrew", icon: linux, cmds: ["brew tap glyph-md/tap", "brew install glyph"] },
 ];
 
