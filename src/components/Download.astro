@@ -13,13 +13,13 @@ const linux = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 
 type Platform = { title: string; icon: string; cmds: string[] };
 const platforms: Platform[] = [
-  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap hamidfzm/tap", "brew trust hamidfzm/tap", "brew install --cask glyph"] },
+  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap glyph-md/tap", "brew trust glyph-md/tap", "brew install --cask glyph"] },
   { title: "Windows · Chocolatey", icon: win, cmds: ["choco install glyph"] },
-  { title: "Windows · Scoop", icon: win, cmds: ["scoop bucket add hamidfzm https://github.com/hamidfzm/scoop-bucket", "scoop install glyph"] },
+  { title: "Windows · Scoop", icon: win, cmds: ["scoop bucket add glyph-md https://github.com/glyph-md/scoop-bucket", "scoop install glyph"] },
   { title: "Linux · Snap", icon: linux, cmds: ["sudo snap install glyph"] },
   { title: "Arch Linux · AUR", icon: linux, cmds: ["yay -S glyph-md-bin"] },
   { title: "Debian / Ubuntu · PPA", icon: linux, cmds: ["sudo add-apt-repository ppa:hamidfzm/glyph", "sudo apt update", "sudo apt install glyph"] },
-  { title: "Linux · Homebrew", icon: linux, cmds: ["brew tap hamidfzm/tap", "brew install glyph"] },
+  { title: "Linux · Homebrew", icon: linux, cmds: ["brew tap glyph-md/tap", "brew install glyph"] },
 ];
 
 const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
