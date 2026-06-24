@@ -470,8 +470,8 @@ a {
   border-radius: var(--radius);
   padding: 1.35rem;
   box-shadow: var(--shadow-sm);
-  /* Let the grid track shrink below the widest command so .code scrolls
-     internally (overflow-x) instead of widening the page on small screens. */
+  /* Let the grid track shrink below the widest command so long commands wrap
+     inside .code instead of widening the page on small screens. */
   min-width: 0;
 }
 .dl-card header {
@@ -499,8 +499,8 @@ a {
   font-family: var(--font-mono);
   font-size: 0.84rem;
   line-height: 1.6;
-  overflow-x: auto;
-  white-space: pre;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
   direction: ltr;
   text-align: left;
 }

@@ -54,6 +54,12 @@ export const ui = {
     "features.themes.title": "Native theming",
     "features.themes.desc":
       "Platform-adaptive styling that respects light and dark mode, with six code themes and typography that feels at home on macOS, Windows, and Linux.",
+    "features.notebooks.title": "More than markdown",
+    "features.notebooks.desc":
+      "Open Jupyter notebooks with rendered cells and outputs, view image and SVG files in a built-in viewer, and read CSV and TSV blocks as clean, scrollable tables.",
+    "features.privacy.title": "Local-first & private",
+    "features.privacy.desc":
+      "Everything runs offline on your machine, and your notes never leave it unless you turn on Cloud Sync to a Git remote you control. Crash reporting is strictly opt-in.",
     "download.heading": "Install Glyph",
     "download.subheading":
       "Pick your platform. Every build is signed and published through the release pipeline.",
@@ -109,6 +115,12 @@ export const ui = {
     "features.themes.title": "ظاهر بومی",
     "features.themes.desc":
       "ظاهری که خود را با سیستم‌عامل وفق می‌دهد و حالت روشن و تاریک را دنبال می‌کند؛ با شش پوستهٔ کد و تایپوگرافی‌ای که روی مک، ویندوز و لینوکس انگار جزئی از خودِ سیستم است.",
+    "features.notebooks.title": "فراتر از مارک‌داون",
+    "features.notebooks.desc":
+      "دفترچه‌های Jupyter را با سلول‌ها و خروجی‌های رندرشده باز کنید، پرونده‌های تصویر و SVG را در نمایشگر داخلی ببینید، و بلوک‌های CSV و TSV را به‌شکل جدول‌های تمیز و قابل‌پیمایش بخوانید.",
+    "features.privacy.title": "محلی‌محور و خصوصی",
+    "features.privacy.desc":
+      "همه‌چیز آفلاین روی دستگاه شما اجرا می‌شود و یادداشت‌هایتان جایی نمی‌روند، مگر اینکه همگام‌سازی ابری را به یک مخزن Git که خودتان کنترل می‌کنید روشن کنید. گزارش خرابی کاملاً اختیاری است.",
     "download.heading": "نصب گلیف",
     "download.subheading":
       "سیستم‌عامل خود را انتخاب کنید. هر نسخه امضای دیجیتال دارد و از مسیر رسمی انتشار منتشر می‌شود.",
@@ -164,6 +176,12 @@ export const ui = {
     "features.themes.title": "Temas nativos",
     "features.themes.desc":
       "Estilo adaptable a la plataforma que respeta el modo claro y oscuro, con seis temas de código y tipografía que se siente en casa en macOS, Windows y Linux.",
+    "features.notebooks.title": "Más que markdown",
+    "features.notebooks.desc":
+      "Abre cuadernos de Jupyter con celdas y salidas renderizadas, visualiza archivos de imagen y SVG en un visor integrado, y lee bloques CSV y TSV como tablas limpias y desplazables.",
+    "features.privacy.title": "Local y privado",
+    "features.privacy.desc":
+      "Todo funciona sin conexión en tu equipo: tus notas nunca salen de él a menos que actives Cloud Sync hacia un remoto Git que tú controlas. El informe de errores es estrictamente opcional.",
     "download.heading": "Instala Glyph",
     "download.subheading":
       "Elige tu plataforma. Cada compilación está firmada y publicada por el flujo de lanzamiento.",
@@ -219,6 +237,12 @@ export const ui = {
     "features.themes.title": "原生主题",
     "features.themes.desc":
       "适配平台的样式，尊重浅色和深色模式，配有六种代码主题，以及在 macOS、Windows 和 Linux 上都自然贴合的排版。",
+    "features.notebooks.title": "不止于 Markdown",
+    "features.notebooks.desc":
+      "打开 Jupyter 笔记本并渲染单元格与输出，在内置查看器中查看图像和 SVG 文件，并将 CSV 和 TSV 块显示为整洁、可滚动的表格。",
+    "features.privacy.title": "本地优先且私密",
+    "features.privacy.desc":
+      "一切都在你的设备上离线运行；除非你开启同步到自己掌控的 Git 远端的云同步，否则你的笔记绝不外传。崩溃报告严格按需选择开启。",
     "download.heading": "安装 Glyph",
     "download.subheading": "选择你的平台。每个版本都经过签名，并通过发布流水线发布。",
     "download.copy": "复制",
@@ -273,6 +297,12 @@ export const ui = {
     "features.themes.title": "Natives Theming",
     "features.themes.desc":
       "Plattformadaptives Design, das hellen und dunklen Modus respektiert, mit sechs Code-Themes und Typografie, die sich auf macOS, Windows und Linux zu Hause fühlt.",
+    "features.notebooks.title": "Mehr als Markdown",
+    "features.notebooks.desc":
+      "Öffne Jupyter-Notebooks mit gerenderten Zellen und Ausgaben, betrachte Bild- und SVG-Dateien in einem integrierten Viewer und lies CSV- und TSV-Blöcke als saubere, scrollbare Tabellen.",
+    "features.privacy.title": "Local-first & privat",
+    "features.privacy.desc":
+      "Alles läuft offline auf deinem Gerät, und deine Notizen verlassen es nie, außer du aktivierst Cloud Sync zu einem Git-Remote, das du kontrollierst. Absturzberichte sind streng optional.",
     "download.heading": "Glyph installieren",
     "download.subheading":
       "Wähle deine Plattform. Jeder Build ist signiert und über die Release-Pipeline veröffentlicht.",
