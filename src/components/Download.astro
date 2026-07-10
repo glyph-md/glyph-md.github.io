@@ -14,6 +14,7 @@ const linux = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 type Platform = { title: string; icon: string; cmds: string[] };
 const platforms: Platform[] = [
   { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap glyph-md/tap", "brew trust glyph-md/tap", "brew install --cask glyph"] },
+  { title: "Windows · winget", icon: win, cmds: ["winget install hamidfzm.Glyph"] },
   { title: "Windows · Chocolatey", icon: win, cmds: ["choco install glyph"] },
   { title: "Windows · Scoop", icon: win, cmds: ["scoop bucket add glyph-md https://github.com/glyph-md/scoop-bucket", "scoop install glyph"] },
   { title: "Linux · Snap", icon: linux, cmds: ["sudo snap install glyph"] },
