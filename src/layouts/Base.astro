@@ -27,7 +27,9 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary_large_image" />
 
-    <meta name="theme-color" content="#007aff" />
+    {/* The accent as a literal: a meta tag cannot read a custom property. */}
+    <meta name="theme-color" content="#2f4fe0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#6d8bff" media="(prefers-color-scheme: dark)" />
 
     {
       lang === "fa" && (

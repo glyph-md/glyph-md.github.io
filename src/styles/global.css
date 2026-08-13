@@ -1,26 +1,28 @@
 /* ── Design tokens ─────────────────────────────────────────────── */
+/* Cobalt Ink. These mirror the app's palette; the canonical table lives in
+   docs/brand.md in hamidfzm/glyph. Change them there first. */
 :root {
-  --accent: #007aff;
-  --accent-2: #3b9bff;
+  --accent: #2f4fe0;
+  --accent-2: #5b7cff;
   --accent-ink: #ffffff;
 
-  --bg: #fbfaf7;
-  --bg-soft: #f3f1ea;
+  --bg: #f5f5f7;
+  --bg-soft: #e8e8ed;
   --surface: #ffffff;
-  --surface-2: #f7f5ef;
-  --border: #e6e2d8;
-  --border-strong: #d6d1c4;
+  --surface-2: #f5f5f7;
+  --border: #d2d2d7;
+  --border-strong: #c7c7cc;
 
-  --ink: #1a1814;
-  --ink-soft: #4a463d;
-  --ink-faint: #837d6f;
+  --ink: #1d1d1f;
+  --ink-soft: #6e6e73;
+  --ink-faint: #aeaeb2;
 
-  --code-bg: #1e1b16;
-  --code-ink: #e9e4d6;
+  --code-bg: #1c1c1e;
+  --code-ink: #f5f5f7;
 
-  --shadow-sm: 0 1px 2px rgba(26, 24, 20, 0.06), 0 1px 1px rgba(26, 24, 20, 0.04);
-  --shadow-md: 0 10px 30px -12px rgba(26, 24, 20, 0.18);
-  --shadow-lg: 0 40px 80px -28px rgba(26, 24, 20, 0.28);
+  --shadow-sm: 0 1px 2px rgba(29, 29, 31, 0.06), 0 1px 1px rgba(29, 29, 31, 0.04);
+  --shadow-md: 0 10px 30px -12px rgba(29, 29, 31, 0.18);
+  --shadow-lg: 0 40px 80px -28px rgba(29, 29, 31, 0.28);
 
   --radius: 14px;
   --radius-lg: 22px;
@@ -36,23 +38,23 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent: #0a84ff;
-    --accent-2: #409cff;
+    --accent: #6d8bff;
+    --accent-2: #8fa6ff;
     --accent-ink: #ffffff;
 
-    --bg: #121110;
-    --bg-soft: #1a1916;
-    --surface: #1c1a17;
-    --surface-2: #232019;
-    --border: #322e27;
-    --border-strong: #423d33;
+    --bg: #1c1c1e;
+    --bg-soft: #2c2c2e;
+    --surface: #2c2c2e;
+    --surface-2: #3a3a3c;
+    --border: #38383a;
+    --border-strong: #48484a;
 
-    --ink: #f3efe6;
-    --ink-soft: #c8c2b4;
-    --ink-faint: #948d7d;
+    --ink: #f5f5f7;
+    --ink-soft: #98989d;
+    --ink-faint: #636366;
 
-    --code-bg: #0d0c0a;
-    --code-ink: #e9e4d6;
+    --code-bg: #131316;
+    --code-ink: #f5f5f7;
 
     --shadow-md: 0 10px 30px -12px rgba(0, 0, 0, 0.6);
     --shadow-lg: 0 40px 80px -28px rgba(0, 0, 0, 0.7);
