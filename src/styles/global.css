@@ -61,6 +61,15 @@
   }
 }
 
+
+/* Long-form copy reads in the document face, the way the app sets prose while
+   its chrome stays on the interface font. Scoped to <main> so the header, nav,
+   footer and buttons are untouched. */
+#main p,
+#main li {
+  font-family: var(--font-serif);
+}
+
 /* ── Persian typography ────────────────────────────────────────── */
 /* Vazirmatn (loaded from Google Fonts in Base.astro on fa pages). Override
    the font tokens so body, headings, and UI all use it; code stays mono. */
