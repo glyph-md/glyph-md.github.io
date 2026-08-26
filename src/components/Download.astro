@@ -13,7 +13,7 @@ const linux = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke
 
 type Platform = { title: string; icon: string; cmds: string[] };
 const platforms: Platform[] = [
-  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap glyph-md/tap", "brew trust glyph-md/tap", "brew install --cask glyph"] },
+  { title: "macOS · Homebrew", icon: apple, cmds: ["brew tap glyph-md/tap", "brew trust glyph-md/tap", "brew install --cask glyph-md/tap/glyph"] },
   { title: "Windows · winget", icon: win, cmds: ["winget install hamidfzm.Glyph"] },
   { title: "Windows · Chocolatey", icon: win, cmds: ["choco install glyph"] },
   { title: "Windows · Scoop", icon: win, cmds: ["scoop bucket add glyph-md https://github.com/glyph-md/scoop-bucket", "scoop install glyph"] },
@@ -22,7 +22,7 @@ const platforms: Platform[] = [
   { title: "Debian / Ubuntu · PPA", icon: linux, cmds: ["sudo add-apt-repository ppa:hamidfzm/glyph", "sudo apt update", "sudo apt install glyph"] },
   { title: "Debian / Ubuntu · APT", icon: linux, cmds: ["curl -fsSL https://glyph-md.github.io/apt-repo/gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/glyph.gpg", 'echo "deb [signed-by=/usr/share/keyrings/glyph.gpg] https://glyph-md.github.io/apt-repo stable main" | sudo tee /etc/apt/sources.list.d/glyph.list', "sudo apt update", "sudo apt install glyph"] },
   { title: "Fedora / RHEL · DNF", icon: linux, cmds: ["sudo tee /etc/yum.repos.d/glyph.repo < <(curl -fsSL https://glyph-md.github.io/rpm-repo/glyph.repo)", "sudo dnf install glyph"] },
-  { title: "Linux · Homebrew", icon: linux, cmds: ["brew tap glyph-md/tap", "brew install glyph"] },
+  { title: "Linux · Homebrew", icon: linux, cmds: ["brew tap glyph-md/tap", "brew install glyph-md/tap/glyph"] },
 ];
 
 const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
