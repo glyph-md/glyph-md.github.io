@@ -384,7 +384,8 @@ a {
   margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
 }
 .features h2,
-.download h2 {
+.download h2,
+.cli h2 {
   font-family: var(--font-serif);
   font-weight: 600;
   font-size: clamp(1.9rem, 4.5vw, 2.8rem);
@@ -393,7 +394,8 @@ a {
   margin-top: 0.7rem;
 }
 .features .sub,
-.download .sub {
+.download .sub,
+.cli .sub {
   color: var(--ink-soft);
   font-size: 1.05rem;
   margin-top: 0.85rem;
@@ -457,7 +459,8 @@ a {
   background: var(--bg-soft);
   border-block: 1px solid var(--border);
 }
-.download .head {
+.download .head,
+.cli .head {
   max-width: 640px;
   margin-inline: auto;
   text-align: center;
