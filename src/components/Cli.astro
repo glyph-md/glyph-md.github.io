@@ -1,0 +1,80 @@
+---
+import { useTranslations, type Lang } from "../i18n/utils";
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useTranslations(lang);
+
+const doc = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg>';
+const globe = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18z"/></svg>';
+const live = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8"/><path d="M10 9l4 2.5-4 2.5z"/></svg>';
+const docker = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="4" height="4"/><rect x="8" y="11" width="4" height="4"/><rect x="13" y="11" width="4" height="4"/><rect x="8" y="6" width="4" height="4"/><path d="M2 15c3.5 4 12.5 4.5 17-1.5 2 .4 3.3-.2 4-1.2-1.6-1-3-.6-3.6-.2"/></svg>';
+
+type Task = { title: string; icon: string; cmds: string[] };
+const tasks: Task[] = [
+  {
+    title: t("cli.export.title"),
+    icon: doc,
+    cmds: ["glyph export README.md --format pdf", "glyph export notes.md --format docx --out ~/notes.docx"],
+  },
+  {
+    title: t("cli.site.title"),
+    icon: globe,
+    cmds: ["glyph export ~/notes --format site --out ./site"],
+  },
+  {
+    title: t("cli.serve.title"),
+    icon: live,
+    cmds: ["glyph serve ~/notes", "glyph serve ~/notes --port 8080"],
+  },
+  {
+    title: t("cli.docker.title"),
+    icon: docker,
+    cmds: ['docker run --rm -v "$PWD/docs:/docs:ro" -v "$PWD/site:/out" ghcr.io/hamidfzm/glyph'],
+  },
+];
+
+const copyIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+const checkIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+---
+<section class="section cli" id="cli">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow">{t("nav.cli")}</p>
+      <h2>{t("cli.heading")}</h2>
+      <p class="sub">{t("cli.subheading")}</p>
+    </div>
+    <div class="dl-grid">
+      {
+        tasks.map((task) => (
+          <div class="dl-card">
+            <header>
+              <Fragment set:html={task.icon} />
+              <h3>{task.title}</h3>
+            </header>
+            {task.cmds.map((cmd) => (
+              <div class="code">
+                {cmd}
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy={cmd}
+                  aria-label={t("download.copy")}
+                  data-copy-icon={copyIcon}
+                  data-check-icon={checkIcon}
+                  set:html={copyIcon}
+                />
+              </div>
+            ))}
+          </div>
+        ))
+      }
+    </div>
+    <p class="dl-foot">
+      {t("cli.formats")}{" "}
+      <a href="https://github.com/hamidfzm/glyph#command-line-usage" rel="noopener">{t("cli.reference")}</a>.
+    </p>
+  </div>
+</section>
