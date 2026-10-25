@@ -68,6 +68,8 @@ export const ui = {
     "download.copied": "Copied!",
     "download.manual": "Or grab a binary from the",
     "download.releases": "Releases page",
+    "download.viewer": "Just reading a file? Open it in your browser, nothing to install:",
+    "download.viewerLink": "web viewer (experimental)",
     "cli.heading": "Publish straight from your terminal",
     "cli.subheading":
       "The same renderer as the app, without a window. Turn a note into a document, a folder into a website, and drop either into a docs pipeline.",
@@ -142,6 +144,8 @@ export const ui = {
     "download.copied": "کپی شد!",
     "download.manual": "یا یک باینری از",
     "download.releases": "صفحهٔ انتشارها",
+    "download.viewer": "فقط می‌خواهید فایلی را بخوانید؟ بدون نصب، در مرورگر:",
+    "download.viewerLink": "نمایشگر وب (آزمایشی)",
     "cli.heading": "مستقیم از ترمینال منتشر کنید",
     "cli.subheading":
       "همان موتور رندر برنامه، بدون پنجره. یک یادداشت را به سند، یک پوشه را به وب‌سایت تبدیل کنید و هر دو را در خط تولید مستندات بگذارید.",
@@ -216,6 +220,8 @@ export const ui = {
     "download.copied": "¡Copiado!",
     "download.manual": "O descarga un binario desde la",
     "download.releases": "página de Releases",
+    "download.viewer": "¿Solo quieres leer un archivo? Ábrelo en el navegador, sin instalar nada:",
+    "download.viewerLink": "visor web (experimental)",
     "cli.heading": "Publica directamente desde la terminal",
     "cli.subheading":
       "El mismo renderizador de la app, sin ventana. Convierte una nota en un documento, una carpeta en un sitio web, y lleva cualquiera de los dos a tu flujo de documentación.",
@@ -289,6 +295,8 @@ export const ui = {
     "download.copied": "已复制！",
     "download.manual": "或从以下位置获取二进制文件：",
     "download.releases": "发布页面",
+    "download.viewer": "只是想阅读文件？无需安装，直接在浏览器中打开：",
+    "download.viewerLink": "网页查看器（实验性）",
     "cli.heading": "直接从终端发布",
     "cli.subheading":
       "与应用相同的渲染引擎，只是没有窗口。把一篇笔记变成文档，把一个文件夹变成网站，两者都能接入文档流水线。",
@@ -362,6 +370,8 @@ export const ui = {
     "download.copied": "Kopiert!",
     "download.manual": "Oder hol dir ein Binary von der",
     "download.releases": "Releases-Seite",
+    "download.viewer": "Nur eine Datei lesen? Ohne Installation im Browser öffnen:",
+    "download.viewerLink": "Web-Viewer (experimentell)",
     "cli.heading": "Direkt aus dem Terminal veröffentlichen",
     "cli.subheading":
       "Dieselbe Rendering-Engine wie in der App, nur ohne Fenster. Mach aus einer Notiz ein Dokument, aus einem Ordner eine Website, und häng beides in deine Docs-Pipeline.",
